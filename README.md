@@ -14,14 +14,17 @@ Managed with [chezmoi](https://www.chezmoi.io/). Based on [dots-hyprland](https:
    chezmoi init --apply https://github.com/zenocode-org/dotfiles.git
    ```
 
-3. Before first apply, edit machine-specific values in `.chezmoi.toml.tmpl` (or the generated `~/.config/chezmoi/.chezmoi.toml`):
-   - `ssh_key_path`, `ssh_host_lf`, `ssh_host_bench` for SSH aliases in `.zshrc`
+3. Before first apply, edit machine-specific values. Copy the template and edit:
+   ```bash
+   cp ~/.local/share/chezmoi/.chezmoi.toml.tmpl ~/.config/chezmoi/.chezmoi.toml
+   $EDITOR ~/.config/chezmoi/.chezmoi.toml
+   ```
+   Set `ssh_key_path`, `ssh_host_lf`, `ssh_host_bench` for SSH aliases in `.zshrc`.
 
 4. Run the bootstrap script (installs packages + dots-hyprland):
    ```bash
    ~/.local/share/chezmoi/run_once_install-deps.sh
    ```
-   Or let chezmoi run it on first apply (if configured).
 
 ## What's included
 
