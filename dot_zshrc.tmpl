@@ -1,0 +1,7 @@
+
+. "$HOME/.local/bin/env"
+alias sshlf="ssh -i {{ .ssh_key_path }} {{ .ssh_host_lf }}"
+alias sshbench="ssh -i {{ .ssh_key_path }} {{ .ssh_host_bench }}"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

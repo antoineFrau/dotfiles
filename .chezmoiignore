@@ -1,0 +1,7 @@
+.cache/
+.local/state/
+.ollama/
+*.wav
+*.mp4
+.config/Cursor/
+.git/

@@ -1,0 +1,7 @@
+# Chezmoi
+.chezmoi.toml
+.chezmoi.state.json
+
+# OS
+.DS_Store
+Thumbs.db
