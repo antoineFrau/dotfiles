@@ -1,0 +1,7 @@
+
+. "$HOME/.local/bin/env"
+alias sshlf="ssh -i {{ index . "ssh_key_path" | default "~/path/to/your/key.pem" }} {{ index . "ssh_host_lf" | default "user@host-lf.example" }}"
+alias sshbench="ssh -i {{ index . "ssh_key_path" | default "~/path/to/your/key.pem" }} {{ index . "ssh_host_bench" | default "user@host-bench.example" }}"
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

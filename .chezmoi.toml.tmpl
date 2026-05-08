@@ -1,0 +1,9 @@
+{{- /* After chezmoi init, set CHEZMOI_SOURCE_DIR if your repo is not at ~/.local/share/chezmoi */ -}}
+{{- if ne (env "CHEZMOI_SOURCE_DIR" | default "") "" }}
+sourceDir = {{ env "CHEZMOI_SOURCE_DIR" | quote }}
+{{- end }}
+
+[data]
+  ssh_key_path = "{{ env "CHEZMOI_SSH_KEY_PATH" | default "~/path/to/your/key.pem" }}"
+  ssh_host_lf = "{{ env "CHEZMOI_SSH_HOST_LF" | default "ec2-user@ec2-xxx.region.compute.amazonaws.com" }}"
+  ssh_host_bench = "{{ env "CHEZMOI_SSH_HOST_BENCH" | default "ec2-user@ec2-xxx.region.compute.amazonaws.com" }}"

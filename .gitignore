@@ -1,0 +1,18 @@
+# IDE / Cursor (machine-local plans, paths)
+.cursor/
+
+# Editor
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Never commit secrets
+.env
+*.pem
+.aws/
+.ssh/
+.gnupg/
