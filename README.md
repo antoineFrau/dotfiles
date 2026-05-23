@@ -28,7 +28,8 @@ Managed with [chezmoi](https://www.chezmoi.io/). Based on [dots-hyprland](https:
 
 ## What's included
 
-- Hyprland config (custom overrides, monitors, workspaces)
+- Hyprland 0.55 config (Lua): `custom/*.lua`, `hyprland.lua`, `hypridle.conf`, `hyprlock.conf`
+- dots-hyprland base (`hyprland/` folder) is installed separately via the bootstrap script
 - Shell config (zsh, bash, starship)
 - illogical-impulse (Quickshell) config
 - foot terminal config
