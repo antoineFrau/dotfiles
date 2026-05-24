@@ -1,5 +1,4 @@
-# Auto start Hyprland on tty1
+# Auto start Hyprland on tty1 (source from .zshrc when zsh is the login shell)
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-  mkdir -p ~/.cache
-  exec start-hyprland > ~/.cache/hyprland.log 2>&1
+  exec Hyprland
 fi
