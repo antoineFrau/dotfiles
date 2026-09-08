@@ -26,10 +26,7 @@ Managed with [chezmoi](https://www.chezmoi.io/). Based on [dots-hyprland](https:
    ~/.local/share/chezmoi/run_once_install-deps.sh
    ```
 
-5. Enable passwordless tty1 login (requires sudo once, then reboot):
-   ```bash
-   ~/.config/hypr/setup/install-autologin.sh
-   ```
+   `chezmoi apply` also installs the tty1 autologin systemd override automatically (prompts for sudo when the config changes). Reboot once after the first apply.
 
 ## Boot flow (no display manager)
 
@@ -37,7 +34,7 @@ Managed with [chezmoi](https://www.chezmoi.io/). Based on [dots-hyprland](https:
 Boot → auto-login tty1 → bash (.bash_profile) → Hyprland → hyprlock
 ```
 
-- **Systemd autologin:** `~/.config/hypr/setup/` stages a getty override (username from chezmoi).
+- **Systemd autologin:** `run_after_install-tty1-autologin.sh` copies the getty override into `/etc/systemd/system/` on `chezmoi apply` (username from chezmoi template).
 - **Hyprland start:** `.bash_profile` execs Hyprland on tty1 when `DISPLAY` is unset.
 - **Boot lockscreen:** `custom/execs.lua` runs `hyprlock` at session start; idle lock via `hypridle` is unchanged.
 

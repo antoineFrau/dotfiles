@@ -1,5 +1,8 @@
 -- Migrated from custom/general.conf
 
+require("custom.monitors")
+require("custom.workspaces")
+
 hl.config({
     general = {
         gaps_in = 2,

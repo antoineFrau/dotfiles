@@ -36,11 +36,11 @@ end
 -- Move focused window to absolute workspace 1..10 via Super+Shift+number row keycodes
 for i = 1, 5 do
     local numberkey = { 10, 11, 12, 13, 14 }
-    hl.bind("SUPER + SHIFT + code:" .. numberkey[i], hl.dsp.window.move({ workspace = i, follow = false }))
+    hl.bind("SUPER + SHIFT + code:" .. numberkey[i], hl.dsp.window.move({ workspace = i, follow = true }))
 end
 for i = 6, 10 do
     local numberkey = { 10, 11, 12, 13, 14 }
-    hl.bind("CTRL + SUPER + SHIFT + code:" .. numberkey[i - 5], hl.dsp.window.move({ workspace = i, follow = false }))
+    hl.bind("CTRL + SUPER + SHIFT + code:" .. numberkey[i - 5], hl.dsp.window.move({ workspace = i, follow = true }))
 end
 
 -- Resize window with Super+Shift+arrows (overrides default move-window on these keys)

@@ -80,7 +80,7 @@
             "workspaceZoom": 1
         },
         "thumbnailPath": "",
-        "wallpaperPath": "~/.config/quickshell/ii/assets/images/default_wallpaper.png",
+        "wallpaperPath": "/home/antoine/.config/quickshell/ii/assets/images/default_wallpaper.png",
         "widgets": {
             "clock": {
                 "cookie": {
@@ -119,7 +119,7 @@
                 "showOnlyWhenLocked": false,
                 "style": "digital",
                 "styleLocked": "digital",
-                "x": 258.5,
+                "x": 246,
                 "y": 359.5
             },
             "weather": {
@@ -208,7 +208,7 @@
             "key": 12
         },
         "splitButtons": false,
-        "superKey": "",
+        "superKey": "",
         "useFnSymbol": false,
         "useMacSymbol": false,
         "useMouseSymbol": false
@@ -229,8 +229,7 @@
         ],
         "monochromeIcons": true,
         "pinnedApps": [
-            "org.kde.dolphin",
-            "kitty"
+            "org.kde.dolphin"
         ],
         "pinnedOnStartup": false
     },
@@ -301,6 +300,10 @@
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
     },
     "notifications": {
+        "monitor": {
+            "enable": false,
+            "name": ""
+        },
         "timeout": 7000
     },
     "osd": {
@@ -359,7 +362,7 @@
         "updateInterval": 3000
     },
     "screenRecord": {
-        "savePath": "~/Videos"
+        "savePath": "/home/antoine/Videos"
     },
     "screenSnip": {
         "savePath": ""
@@ -444,6 +447,10 @@
                     {
                         "size": 1,
                         "type": "idleInhibitor"
+                    },
+                    {
+                        "size": 1,
+                        "type": "gameMode"
                     }
                 ]
             },
@@ -484,6 +491,7 @@
     "updates": {
         "adviseUpdateThreshold": 75,
         "checkInterval": 120,
+        "enableCheck": true,
         "stronglyAdviseUpdateThreshold": 200
     },
     "waffles": {
